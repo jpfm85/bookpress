@@ -1,0 +1,142 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: bookpress\n"
+"POT-Creation-Date: 2014-09-11 22:27-0300\n"
+"PO-Revision-Date: 2014-09-11 22:33-0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.9\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_x\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../src/bookpress/metaboxes/item-info.php:22
+msgid "Item Info"
+msgstr "Informações sobre o Item"
+
+#: ../src/bookpress/metaboxes/item-info.php:71
+msgid "Year published"
+msgstr "Ano de publicação"
+
+#: ../src/bookpress/taxonomies/author.php:17
+#: ../src/bookpress/taxonomies/author.php:19
+msgid "Authors"
+msgstr "Autores"
+
+#: ../src/bookpress/taxonomies/author.php:18
+msgid "Author"
+msgstr "Autor"
+
+#: ../src/bookpress/taxonomies/author.php:20
+msgid "All Authors"
+msgstr "Todos os Autores"
+
+#: ../src/bookpress/taxonomies/author.php:21
+msgid "Parent Author"
+msgstr "Autor relacionado"
+
+#: ../src/bookpress/taxonomies/author.php:22
+msgid "Parent Author:"
+msgstr "Autor relacionado:"
+
+#: ../src/bookpress/taxonomies/author.php:23
+msgid "New Author"
+msgstr "Novo (a) autor"
+
+#: ../src/bookpress/taxonomies/author.php:24
+msgid "Add New Author"
+msgstr "Adicionar novo(a) autor(a)"
+
+#: ../src/bookpress/taxonomies/author.php:25
+msgid "Edit Author"
+msgstr "Editar Autor(a)"
+
+#: ../src/bookpress/taxonomies/author.php:26
+msgid "Update Author"
+msgstr "Atualizar Autor(a)"
+
+#: ../src/bookpress/taxonomies/author.php:27
+msgid "Separate authors with commas"
+msgstr "Separe autores(as) entre vírgulas"
+
+#: ../src/bookpress/taxonomies/author.php:28
+msgid "Search Authors"
+msgstr "Pesquisar Autor(a)"
+
+#: ../src/bookpress/taxonomies/author.php:29
+msgid "Add or remove authors"
+msgstr "Adicionar ou remover Autor(a)"
+
+#: ../src/bookpress/taxonomies/author.php:30
+msgid "Choose from the most used authorr"
+msgstr "Escolha entre os autores mais usados"
+
+#: ../src/bookpress/taxonomies/author.php:31
+msgid "Author Not Found"
+msgstr "Autor não encontrado"
+
+#: ../src/bookpress/types/item.php:15
+msgid "Items"
+msgstr "Itens"
+
+#: ../src/bookpress/types/item.php:16
+msgid "Item"
+msgstr "Item"
+
+#: ../src/bookpress/types/item.php:17
+msgid "Collection"
+msgstr "Acervo"
+
+#: ../src/bookpress/types/item.php:18
+msgid "Parent Item:"
+msgstr "Item relacionado:"
+
+#: ../src/bookpress/types/item.php:19
+msgid "All Items"
+msgstr "Todo o acervo"
+
+#: ../src/bookpress/types/item.php:20
+msgid "View Item"
+msgstr "Ver item"
+
+#: ../src/bookpress/types/item.php:21
+msgid "Add New Item"
+msgstr "Adicionar novo item"
+
+#: ../src/bookpress/types/item.php:22
+msgid "Add New"
+msgstr "Novo item"
+
+#: ../src/bookpress/types/item.php:23
+msgid "Edit Item"
+msgstr "Editar Item"
+
+#: ../src/bookpress/types/item.php:24
+msgid "Update Item"
+msgstr "Atualizar Item"
+
+#: ../src/bookpress/types/item.php:25
+msgid "Search Item"
+msgstr "Pesquisar acervo"
+
+#: ../src/bookpress/types/item.php:26
+msgid "Item not found"
+msgstr "Item não encontrado"
+
+#: ../src/bookpress/types/item.php:27
+msgid "Item not found in Trash"
+msgstr "Item não encontrado no lixo"
+
+#: ../src/bookpress/types/item.php:36
+msgid "item"
+msgstr "item"
+
+#: ../src/bookpress/types/item.php:37
+msgid "Library items"
+msgstr "Itens do Acervo"
