@@ -49,7 +49,9 @@ class Item_Info {
 		}		
 		
 		$year = sanitize_text_field(filter_input(INPUT_POST, 'year'));
+		$physical_location = sanitize_text_field(filter_input(INPUT_POST, 'physical_location'));
 		update_post_meta($post_id, '_year', $year);
+		update_post_meta($post_id, '_physical_location', $physical_location);
 		
 }
 	
@@ -61,9 +63,9 @@ class Item_Info {
 		
 		if (empty($year)) {
 			$year = $current_year;
-		}
+		}		
 		
-		//$moth = get_post_meta( $post->ID, '_moth', true );
+		$physical_location  = get_post_meta( $post->ID, '_physical_location', true );
 		
 ?>
 <p>
@@ -78,7 +80,19 @@ class Item_Info {
 		type ="number"
 		value ="<?php echo esc_attr($year); ?>"
 		/>
-</p>	
+</p>
+<p>
+	<label for="physical_location">
+		<?php _e('Physical location', 'bookpress');?>
+	</label>
+	<input
+		id="physical_location"
+		name="physical_location"
+		type="text"
+		value="<?php echo esc_attr($physical_location); ?>"
+		/>
+</p>
+	
 <?php
 
 

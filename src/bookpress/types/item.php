@@ -7,6 +7,9 @@ class Item{
 	public function __construct() {
 		// Hook into the 'init' action
 		add_action( 'init', array(__CLASS__, 'init'), 0 );
+		add_filter('manage_edit-item_columns', array(__CLASS__, 'manage_edit_item_columns'));
+		add_filter('manage_edit-item_sortable_columns', array(__CLASS__, 'manage_edit_item_sortable_columns'));
+		add_action('manage_item_posts_custom_column', array(__CLASS__, 'manage_item_posts_custom_column'),10, 2);
 	}
 	// Register Custom Post Type
 public static function init() {
@@ -56,8 +59,28 @@ public static function init() {
 
 }
 
-
+public static function manage_edit_item_columns ($columns){
+	$columns ['physical_location'] = __('Physical location', 'bookpress');
+	return $columns;
 }
+
+public static function manage_edit_item_sortable_columns ($sortable_columns){
+	
+	$sortable_columns ['physical_location'] = '_physical_location';
+	return $sortable_columns;
+	
+}
+
+public static function manage_item_posts_custom_column ($column, $post_id){
+	
+	switch ($column){
+		case 'physical_location':
+			echo get_post_meta($post_id,'_physical_location', true );
+			break;
+	}
+	}
+}
+
 
 return new Item();
 
