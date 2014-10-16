@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bookpress\n"
-"POT-Creation-Date: 2014-09-16 20:54-0300\n"
-"PO-Revision-Date: 2014-09-17 14:21-0300\n"
+"POT-Creation-Date: 2014-09-23 21:17-0300\n"
+"PO-Revision-Date: 2014-09-23 21:17-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -16,7 +16,20 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e;_x\n"
 "X-Poedit-SearchPath-0: ../..\n"
 
-#: ../../biblioteca-icg/src/biblioteca-icg/theme.php:21
+#: ../../biblioteca-icg/front-page.php:4
+#, fuzzy
+msgid "Search"
+msgstr "Pesquisar acervo"
+
+#: ../../biblioteca-icg/index.php:19
+msgid "Nothing was found"
+msgstr "Nada foi encontrado"
+
+#: ../../biblioteca-icg/page-map.php:6
+msgid "Map Page"
+msgstr "Página do Mapa"
+
+#: ../../biblioteca-icg/src/biblioteca-icg/theme.php:40
 msgid "Primary Menu"
 msgstr "Menu Principal"
 
