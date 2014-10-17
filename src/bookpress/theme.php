@@ -17,7 +17,11 @@ class Theme {
 	}
 
 	public static function after_setup_theme() {
-
+		add_editor_style();
+		add_theme_support( 'automatic-feed-links' );
+		add_theme_support( 'custom-background' );
+		add_theme_support( 'custom-header' );
+		add_theme_support( 'post-thumbnails' );
 		load_theme_textdomain( 'bookpress', get_template_directory() . '/languages' );
 	}
 
