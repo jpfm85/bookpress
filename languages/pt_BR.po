@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bookpress\n"
-"POT-Creation-Date: 2014-09-23 21:17-0300\n"
-"PO-Revision-Date: 2014-09-23 21:17-0300\n"
+"POT-Creation-Date: 2014-11-04 20:07-0300\n"
+"PO-Revision-Date: 2014-11-04 20:07-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -16,12 +16,17 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e;_x\n"
 "X-Poedit-SearchPath-0: ../..\n"
 
+#: ../../biblioteca-icg/comments.php:7
+msgid "Comments"
+msgstr "Comentários"
+
 #: ../../biblioteca-icg/front-page.php:4
 #, fuzzy
 msgid "Search"
 msgstr "Pesquisar acervo"
 
-#: ../../biblioteca-icg/index.php:19
+#: ../../biblioteca-icg/index.php:15 ../../biblioteca-icg/search.php:24
+#: ../../biblioteca-icg/single.php:18
 msgid "Nothing was found"
 msgstr "Nada foi encontrado"
 
@@ -29,19 +34,31 @@ msgstr "Nada foi encontrado"
 msgid "Map Page"
 msgstr "Página do Mapa"
 
-#: ../../biblioteca-icg/src/biblioteca-icg/theme.php:40
+#: ../../biblioteca-icg/src/biblioteca-icg/theme.php:44
 msgid "Primary Menu"
 msgstr "Menu Principal"
 
-#: ../../bookpress/src/bookpress/metaboxes/item-info.php:22
+#: ../../biblioteca-icg/src/biblioteca-icg/theme.php:68
+msgid "Rating: "
+msgstr "Avaliação:"
+
+#: ../../biblioteca-icg/user-menu.php:10
+msgid "Login"
+msgstr ""
+
+#: ../../biblioteca-icg/user-menu.php:21
+msgid "Logout"
+msgstr ""
+
+#: ../../bookpress/src/bookpress/metaboxes/item-info.php:19
 msgid "Item Info"
 msgstr "Informações sobre o Item"
 
-#: ../../bookpress/src/bookpress/metaboxes/item-info.php:73
+#: ../../bookpress/src/bookpress/metaboxes/item-info.php:64
 msgid "Year published"
 msgstr "Ano de publicação"
 
-#: ../../bookpress/src/bookpress/metaboxes/item-info.php:86
+#: ../../bookpress/src/bookpress/metaboxes/item-info.php:77
 #: ../../bookpress/src/bookpress/types/item.php:63
 msgid "Physical location"
 msgstr "Local Físico"
@@ -103,62 +120,62 @@ msgstr "Escolha entre os autores mais usados"
 msgid "Author Not Found"
 msgstr "Autor não encontrado"
 
-#: ../../bookpress/src/bookpress/types/item.php:18
+#: ../../bookpress/src/bookpress/types/item.php:19
 msgid "Items"
 msgstr "Itens"
 
-#: ../../bookpress/src/bookpress/types/item.php:19
+#: ../../bookpress/src/bookpress/types/item.php:20
 msgid "Item"
 msgstr "Item"
 
-#: ../../bookpress/src/bookpress/types/item.php:20
+#: ../../bookpress/src/bookpress/types/item.php:21
 msgid "Collection"
 msgstr "Acervo"
 
-#: ../../bookpress/src/bookpress/types/item.php:21
+#: ../../bookpress/src/bookpress/types/item.php:22
 msgid "Parent Item:"
 msgstr "Item relacionado:"
 
-#: ../../bookpress/src/bookpress/types/item.php:22
+#: ../../bookpress/src/bookpress/types/item.php:23
 msgid "All Items"
 msgstr "Todo o acervo"
 
-#: ../../bookpress/src/bookpress/types/item.php:23
+#: ../../bookpress/src/bookpress/types/item.php:24
 msgid "View Item"
 msgstr "Ver item"
 
-#: ../../bookpress/src/bookpress/types/item.php:24
+#: ../../bookpress/src/bookpress/types/item.php:25
 msgid "Add New Item"
 msgstr "Adicionar novo item"
 
-#: ../../bookpress/src/bookpress/types/item.php:25
+#: ../../bookpress/src/bookpress/types/item.php:26
 msgid "Add New"
 msgstr "Novo item"
 
-#: ../../bookpress/src/bookpress/types/item.php:26
+#: ../../bookpress/src/bookpress/types/item.php:27
 msgid "Edit Item"
 msgstr "Editar Item"
 
-#: ../../bookpress/src/bookpress/types/item.php:27
+#: ../../bookpress/src/bookpress/types/item.php:28
 msgid "Update Item"
 msgstr "Atualizar Item"
 
-#: ../../bookpress/src/bookpress/types/item.php:28
+#: ../../bookpress/src/bookpress/types/item.php:29
 msgid "Search Item"
 msgstr "Pesquisar acervo"
 
-#: ../../bookpress/src/bookpress/types/item.php:29
+#: ../../bookpress/src/bookpress/types/item.php:30
 msgid "Item not found"
 msgstr "Item não encontrado"
 
-#: ../../bookpress/src/bookpress/types/item.php:30
+#: ../../bookpress/src/bookpress/types/item.php:31
 msgid "Item not found in Trash"
 msgstr "Item não encontrado no lixo"
 
-#: ../../bookpress/src/bookpress/types/item.php:39
+#: ../../bookpress/src/bookpress/types/item.php:40
 msgid "item"
 msgstr "item"
 
-#: ../../bookpress/src/bookpress/types/item.php:40
+#: ../../bookpress/src/bookpress/types/item.php:41
 msgid "Library items"
 msgstr "Itens do Acervo"
