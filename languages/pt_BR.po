@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bookpress\n"
-"POT-Creation-Date: 2014-11-04 20:07-0300\n"
-"PO-Revision-Date: 2014-11-04 20:07-0300\n"
-"Last-Translator: \n"
+"POT-Creation-Date: 2014-11-06 23:08-0300\n"
+"PO-Revision-Date: 2014-11-06 23:10-0300\n"
+"Last-Translator: Paulo H. (Jimmy) Andrade Mota C. <ti@ultracomunica.com.br>\n"
 "Language-Team: \n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
@@ -20,12 +20,15 @@ msgstr ""
 msgid "Comments"
 msgstr "Comentários"
 
-#: ../../biblioteca-icg/front-page.php:4
-#, fuzzy
+#: ../../biblioteca-icg/front-page.php:10
 msgid "Search"
-msgstr "Pesquisar acervo"
+msgstr "Pesquisar"
 
-#: ../../biblioteca-icg/index.php:15 ../../biblioteca-icg/search.php:24
+#: ../../biblioteca-icg/front-page.php:26
+msgid "Last inserted items"
+msgstr "Últimos itens inseridos"
+
+#: ../../biblioteca-icg/index.php:15 ../../biblioteca-icg/search.php:23
 #: ../../biblioteca-icg/single.php:18
 msgid "Nothing was found"
 msgstr "Nada foi encontrado"
@@ -34,32 +37,77 @@ msgstr "Nada foi encontrado"
 msgid "Map Page"
 msgstr "Página do Mapa"
 
-#: ../../biblioteca-icg/src/biblioteca-icg/theme.php:44
+#: ../../biblioteca-icg/page-profile.php:5
+msgid "Profile Page"
+msgstr "Página de perfil"
+
+#: ../../biblioteca-icg/page-profile.php:58
+#: ../../biblioteca-icg/page-profile.php:64
+msgid "Your last visited items were removed succesfully"
+msgstr "Seus últimos itens visitados foram removidos com sucesso"
+
+#: ../../biblioteca-icg/page-profile.php:73
+msgid "Você pesquisou anteriormente por: "
+msgstr "Você pesquisou anteriormente por: "
+
+#: ../../biblioteca-icg/page-profile.php:89
+msgid "Clean last search queries"
+msgstr "Limpar últimas pesquisas"
+
+#: ../../biblioteca-icg/page-profile.php:92
+msgid "Você não procurou por nada ainda"
+msgstr "Você não procurou por nada ainda"
+
+#: ../../biblioteca-icg/page-profile.php:95
+msgid "Você já visitou os seguintes items do acervo: "
+msgstr "Você já visitou os seguintes items do acervo: "
+
+#: ../../biblioteca-icg/page-profile.php:113
+msgid "Clean last visited list"
+msgstr "Limpar lista dos últimos itens visitados"
+
+#: ../../biblioteca-icg/page-profile.php:116
+msgid "Você não acessou nenhum item do acervo"
+msgstr "Você não acessou nenhum item do acervo"
+
+#: ../../biblioteca-icg/page-search.php:5
+msgid "Search Page"
+msgstr "Página de busca"
+
+#: ../../biblioteca-icg/page-search.php:45
+#: ../../bookpress/src/bookpress/metaboxes/item-info.php:64
+msgid "Year published"
+msgstr "Ano de publicação"
+
+#: ../../biblioteca-icg/src/biblioteca-icg/theme.php:42
 msgid "Primary Menu"
 msgstr "Menu Principal"
 
-#: ../../biblioteca-icg/src/biblioteca-icg/theme.php:68
+#: ../../biblioteca-icg/src/biblioteca-icg/theme.php:53
+msgid "Column four (home)"
+msgstr "Coluna 4 (página inicial)"
+
+#: ../../biblioteca-icg/src/biblioteca-icg/theme.php:61
+msgid "Profile Page Column"
+msgstr "Coluna da página de perfil"
+
+#: ../../biblioteca-icg/src/biblioteca-icg/theme.php:77
 msgid "Rating: "
 msgstr "Avaliação:"
 
-#: ../../biblioteca-icg/user-menu.php:10
+#: ../../biblioteca-icg/user-menu.php:25
 msgid "Login"
-msgstr ""
+msgstr "Entrar"
 
-#: ../../biblioteca-icg/user-menu.php:21
+#: ../../biblioteca-icg/user-menu.php:45
 msgid "Logout"
-msgstr ""
+msgstr "Sair"
 
 #: ../../bookpress/src/bookpress/metaboxes/item-info.php:19
 msgid "Item Info"
 msgstr "Informações sobre o Item"
 
-#: ../../bookpress/src/bookpress/metaboxes/item-info.php:64
-msgid "Year published"
-msgstr "Ano de publicação"
-
-#: ../../bookpress/src/bookpress/metaboxes/item-info.php:77
-#: ../../bookpress/src/bookpress/types/item.php:63
+#: ../../bookpress/src/bookpress/metaboxes/item-info.php:78
 msgid "Physical location"
 msgstr "Local Físico"
 
@@ -119,6 +167,66 @@ msgstr "Escolha entre os autores mais usados"
 #: ../../bookpress/src/bookpress/taxonomies/author.php:31
 msgid "Author Not Found"
 msgstr "Autor não encontrado"
+
+#: ../../bookpress/src/bookpress/taxonomies/type.php:20
+msgid "Item types"
+msgstr "Tipos de itens"
+
+#: ../../bookpress/src/bookpress/taxonomies/type.php:21
+msgid "Item type"
+msgstr "Tipo de item"
+
+#: ../../bookpress/src/bookpress/taxonomies/type.php:22
+msgid "Types"
+msgstr "Tipos"
+
+#: ../../bookpress/src/bookpress/taxonomies/type.php:23
+msgid "All Types"
+msgstr "Todos os tipos"
+
+#: ../../bookpress/src/bookpress/taxonomies/type.php:24
+msgid "Parent Type"
+msgstr "Tipo relacionado"
+
+#: ../../bookpress/src/bookpress/taxonomies/type.php:25
+msgid "Parent Type:"
+msgstr "Tipo relacionado:"
+
+#: ../../bookpress/src/bookpress/taxonomies/type.php:26
+msgid "New Type"
+msgstr "Novo tipo"
+
+#: ../../bookpress/src/bookpress/taxonomies/type.php:27
+msgid "Add New Type"
+msgstr "Adicionar novo tipo"
+
+#: ../../bookpress/src/bookpress/taxonomies/type.php:28
+msgid "Edit Type"
+msgstr "Editar tipo"
+
+#: ../../bookpress/src/bookpress/taxonomies/type.php:29
+msgid "Update Type"
+msgstr "Atualizar tipo"
+
+#: ../../bookpress/src/bookpress/taxonomies/type.php:30
+msgid "Separate types with commas"
+msgstr "Separe tipos com vírgulas"
+
+#: ../../bookpress/src/bookpress/taxonomies/type.php:31
+msgid "Search Types"
+msgstr "Pesquisar tipos"
+
+#: ../../bookpress/src/bookpress/taxonomies/type.php:32
+msgid "Add or remove types"
+msgstr "Adicionar ou remover tipos"
+
+#: ../../bookpress/src/bookpress/taxonomies/type.php:33
+msgid "Choose from the most used types"
+msgstr "Escolha entre os tipos mais usados"
+
+#: ../../bookpress/src/bookpress/taxonomies/type.php:34
+msgid "Type Not Found"
+msgstr "Tipo não encontrado"
 
 #: ../../bookpress/src/bookpress/types/item.php:19
 msgid "Items"

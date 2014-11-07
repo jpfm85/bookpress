@@ -60,13 +60,13 @@ class Item {
 	}
 
 	public static function manage_edit_item_columns( $columns ) {
-		$columns [ 'physical_location' ] = __( 'Physical location', 'bookpress' );
+		//$columns [ 'physical_location' ] = __( 'Physical location', 'bookpress' );
 		return $columns;
 	}
 
 	public static function manage_edit_item_sortable_columns( $sortable_columns ) {
 
-		$sortable_columns [ 'physical_location' ] = '_physical_location';
+		//$sortable_columns [ 'physical_location' ] = '_physical_location';
 		return $sortable_columns;
 	}
 
@@ -74,7 +74,7 @@ class Item {
 
 		switch ( $column ) {
 			case 'physical_location':
-				echo get_post_meta( $post_id, '_physical_location', true );
+				//echo get_post_meta( $post_id, '_physical_location', true );
 				break;
 		}
 	}

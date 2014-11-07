@@ -16,10 +16,11 @@ class Theme {
 
 		add_filter( 'search_queries', array( __CLASS__, 'search_queries' ), 10, 1 );
 		add_filter( 'comment_form_default_fields', array( __CLASS__, 'comment_form_default_fields' ) );
-		add_filter( 'pre_get_posts', array( __CLASS__, 'pre_get_posts' ), 10, 1 );
+		add_filter( 'author_like_get_posts', array( __CLASS__, 'author_like_get_posts' ), 10, 1 );
 
 		require_once get_template_directory() . '/src/bookpress/types/item.php';
 		require_once get_template_directory() . '/src/bookpress/taxonomies/author.php';
+		require_once get_template_directory() . '/src/bookpress/taxonomies/type.php';
 		require_once get_template_directory() . '/src/bookpress/metaboxes/item-info.php';
 	}
 
@@ -52,9 +53,9 @@ class Theme {
 		return $wpdb->get_col( $statement );
 	}
 
-	public static function pre_get_posts( $query ) {
+	public static function author_like_get_posts( $query ) {
 
-		if ( is_search() ) {
+		if ( is_search() && $query[ 'post_type' ] !== 'nav_menu_item' ) {
 			/* @var $author_like string Retorna o nome do autor, caso o usuario tenha usado a busca avancada */
 			$author_like		 = filter_input( INPUT_GET, 'author_like', FILTER_SANITIZE_STRING );
 			/* @var $author_query_string string As palavras-chave da busca normal ou o nome do autor da avancada */
@@ -63,7 +64,7 @@ class Theme {
 			$term_ids			 = static::tax_query_name_like( 'author', $author_query_string );
 
 			if ( count( $term_ids ) > 0 ) {
-				$author_query_args = array(
+				$author_query_args		 = array(
 					array(
 						'taxonomy'			 => 'author',
 						'field'				 => 'term_id',
@@ -72,7 +73,7 @@ class Theme {
 						'terms'				 => $term_ids
 					)
 				);
-				$query->set( 'tax_query', $author_query_args );
+				$query[ 'tax_query' ]	 = $author_query_args;
 			}
 		}
 		return $query;
@@ -80,27 +81,40 @@ class Theme {
 
 	public static function template_redirect() {
 		$current_user_id = get_current_user_id();
+
 		if ( is_search() && is_user_logged_in() ) {
-			$search_query = get_search_query();
 
-			$last_search_queries = get_user_meta( $current_user_id, 'last_search_queries', true );
-
-			$last_search_queries = apply_filters( 'search_queries', $last_search_queries );
-
-			update_user_meta( $current_user_id, 'last_search_queries', $last_search_queries, false );
+			$search_query			 = get_search_query();
+			$last_search_queries	 = get_user_meta( $current_user_id, 'last_search_queries', true );
+			$last_search_queries[]	 = $search_query;
+			$last_search_queries	 = apply_filters( 'search_queries', $last_search_queries );
+			$update_user_meta		 = update_user_meta( $current_user_id, 'last_search_queries', $last_search_queries, false );
 		} if ( is_singular( 'item' ) && is_user_logged_in() ) {
 			$the_id		 = intval( get_the_ID() );
 			$user_meta	 = get_user_meta( $current_user_id, 'last_visited_items', true );
-
 			if ( is_array( $user_meta ) ) {
-
 				$user_meta [] = $the_id;
 			} else {
 				$user_meta = array( $the_id );
 			}
-
 			$user_meta = array_unique( $user_meta );
 			update_user_meta( $current_user_id, 'last_visited_items', $user_meta, false );
+
+			$the_terms					 = get_the_terms( get_the_ID(), 'category' );
+			$user_last_categories_meta	 = get_user_meta( $current_user_id, 'user_last_categories', true );
+
+			$the_terms_ids = array();
+			foreach ( $the_terms as $term ) {
+				$the_terms_ids[] = $term->term_id;
+			}
+
+			if ( is_array( $user_last_categories_meta ) ) {
+				$user_last_categories_meta = array_merge( $user_last_categories_meta, $the_terms_ids );
+			} else {
+				$user_last_categories_meta = $the_terms_ids;
+			}
+			$user_last_categories_meta = array_unique( $user_last_categories_meta );
+			update_user_meta( $current_user_id, 'user_last_categories', $user_last_categories_meta, false );
 		}
 	}
 
@@ -115,8 +129,8 @@ class Theme {
 		} else {
 			$search_queries = array_unique( $search_queries );
 		}
-		//return array_filter( $search_queries, array( __CLASS__, 'search_queries_filter_callback' ) );
-		return $search_queries;
+		return array_filter( $search_queries, array( __CLASS__, 'search_queries_filter_callback' ) );
+		//return $search_queries;
 	}
 
 }

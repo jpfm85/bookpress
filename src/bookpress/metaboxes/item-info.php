@@ -61,7 +61,7 @@ class Item_Info {
 		?>
 		<p>
 			<label for="year">
-		<?php _e( 'Year published', 'bookpress' ) ?>
+				<?php _e( 'Year published', 'bookpress' ) ?>
 			</label>
 			<input		
 				id ="year"
@@ -72,6 +72,7 @@ class Item_Info {
 				value ="<?php echo esc_attr( $year ); ?>"
 				/>
 		</p>
+		<!--
 		<p>
 			<label for="physical_location">
 		<?php _e( 'Physical location', 'bookpress' ); ?>
@@ -83,7 +84,7 @@ class Item_Info {
 				value="<?php echo esc_attr( $physical_location ); ?>"
 				/>
 		</p>
-
+		-->
 		<?php
 	}
 
